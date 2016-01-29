@@ -6,6 +6,10 @@ TEST (Pay, Total_owed)
     // equal hours worked to proper pay
     EXPECT_EQ(total_owed(5,5), 0);
     EXPECT_EQ(total_owed(5,6), 12);
+    //add tests for different time brackets
+    EXPECT_EQ(total_owed(6,11), 52);
+    EXPECT_EQ(total_owed(6,2), 92);
+    EXPECT_EQ(total_owed(5,4), 136);
 
 }
 

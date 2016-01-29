@@ -1,14 +1,12 @@
 #include "/Users/becca/Desktop/gtest/googletest-read-only/xcode/Build/Debug/gtest.framework/Headers/gtest.h"
 #include "functions.h"
 
-// my first fancy addition test
 TEST (Pay, Total_owed)
 {
-    // equal to 20
-    EXPECT_EQ(total_owed(0), 0);
+    // equal hours worked to proper pay
+    EXPECT_EQ(total_owed(5,5), 0);
+    EXPECT_EQ(total_owed(5,6), 12);
 
-    // not equal to 20
-    EXPECT_NE(total_owed(0), 5);
 }
 
 int main(int argc, char * argv[])

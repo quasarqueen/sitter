@@ -18,10 +18,11 @@ TEST (Pay, Total_owed)
 
     EXPECT_EQ(total_owed(10,10,9), 0);
     EXPECT_EQ(total_owed(2,2,9), 0);
+    //test different bedtimes
+    EXPECT_EQ(total_owed(6,11,10), 56);
+    EXPECT_EQ(total_owed(6,2,8), 88);
+    EXPECT_EQ(total_owed(10,4,11), 84);
 }
 
 int main(int argc, char * argv[])
 {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
-}

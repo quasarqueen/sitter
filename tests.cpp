@@ -4,17 +4,20 @@
 TEST (Pay, Total_owed)
 {
     // equal hours worked to proper pay
-    EXPECT_EQ(total_owed(5,5), 0);
-    EXPECT_EQ(total_owed(5,6), 12);
+    EXPECT_EQ(total_owed(5,5,9), 0);
+    EXPECT_EQ(total_owed(5,6,9), 12);
+    
     //add tests for different endtime brackets
-    EXPECT_EQ(total_owed(6,11), 52);
-    EXPECT_EQ(total_owed(6,2), 92);
-    EXPECT_EQ(total_owed(5,4), 136);
+    EXPECT_EQ(total_owed(6,11,9), 52);
+    EXPECT_EQ(total_owed(6,2,9), 92);
+    EXPECT_EQ(total_owed(5,4,9), 136);
     //add tests for different start and end brackets
-    EXPECT_EQ(total_owed(9,11), 16);
-    EXPECT_EQ(total_owed(12,3), 48);
-    EXPECT_EQ(total_owed(10,4), 80);
+    EXPECT_EQ(total_owed(9,11,9), 16);
+    EXPECT_EQ(total_owed(12,3,9), 48);
+    EXPECT_EQ(total_owed(10,4,9), 80);
 
+    EXPECT_EQ(total_owed(10,10,9), 0);
+    EXPECT_EQ(total_owed(2,2,9), 0);
 }
 
 int main(int argc, char * argv[])

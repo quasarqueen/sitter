@@ -1,4 +1,4 @@
-int total_owed (int h)
+int total_owed (int st, int end)
 {
-    return h*0;
+    return (end-st)*12;
 }

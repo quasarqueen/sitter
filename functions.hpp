@@ -1,6 +1,6 @@
 int total_owed (int st, int end, int bed)
 {
-    //start from 5-9
+    //start from 5-bed
     if (st>=5 && st <=bed && end >=5 && end <=bed){
         return (end-st)*12;
     }
